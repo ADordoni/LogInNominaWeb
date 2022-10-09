@@ -1,0 +1,87 @@
+﻿@model IEnumerable<LogInNominaWeb.Models.Empleado>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Leer</title>
+    </head>
+    <body>
+        <table class="table">
+            <tr>
+                <th>
+                    DNI
+                </th>
+                 <th>
+                    Nombre y apellido
+                </th>
+                 <th>
+                    Domicilio
+                </th>
+                 <th>
+                    Fecha de nacimiento
+                </th>
+                 <th>
+                    Fecha de ingreso
+                </th>
+                 <th>
+                    Puesto
+                </th>
+                 <th>
+                    Salario
+                </th>
+            </tr>
+            @foreach(var Persona in Model)
+            {
+              <tr>
+                @if(@Persona.nombre != null)
+                {
+                   <td>                    
+                    @Persona.dni                     
+                   </td>
+                   <td>
+                    @Persona.nombre
+                   </td>
+                   <td>
+                    @Persona.domicilio
+                   </td>
+                   <td>
+                    @Persona.fechanac 
+                   </td>
+                   <td>
+                    @Persona.fechaing 
+                   </td>
+                   <td>
+                    @Persona.puesto
+                   </td>
+                   <td>
+                    @Persona.salario
+                   </td>
+                   <td>
+                    <a href="/Home/Modificacion?usuario=@Persona.usuario&dni=@Persona.dni">Modificar</a>                    
+                   </td>
+                   <td>
+                    <a href="/Home/Baja?usuario=@Persona.usuario&dni=@Persona.dni">Borrar</a>                    
+                   </td>
+                }               
+                  
+              </tr>
+            }            
+        </table>      
+    @foreach(var Persona in Model)
+    {
+        @if(@Persona.usuario != null)
+        {
+            <td>
+               <a href="/Home/AltaRegistro?usuario=@Persona.usuario">Ingresar un nuevo registro</a>
+            </td>
+            break;
+        }
+    }
+    <br />
+    <a href="/Home/Index">Cerrar Sesión</a>
+    </body>

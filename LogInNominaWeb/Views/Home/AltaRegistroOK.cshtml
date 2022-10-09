@@ -1,0 +1,19 @@
+﻿@model LogInNominaWeb.Models.Empleado
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AltaRegistroOK</title>
+</head>
+<body>
+    <p>El registro se cargó exitosamente</p>
+    <a href="/Home/AltaRegistro?usuario=@Model.usuario">Ingresar nuevo registro</a>
+    <a href="/Home/Leer?usuario=@Model.usuario">Leer registros almacenados</a>    
+    <a href="/Home/Index">Cerrar sesión</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿@model LogInNominaWeb.Models.Cuenta
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Inicio</title>
+    </head>
+    <body>
+        Bienvenido a su cuenta
+        <br />
+        <a href="/Home/Leer?usuario=@Model.nombre">Leer registros almacenados</a>
+        <br />
+        <a href="/Home/AltaRegistro?usuario=@Model.nombre">Agregar nuevo registro</a>
+        <br />
+        <a href="/Home/Index">Cerrar Sesión</a>
+    </body>
+</html>

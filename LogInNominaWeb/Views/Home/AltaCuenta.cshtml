@@ -1,0 +1,27 @@
+﻿@model IEnumerable<LogInNominaWeb.Models.Cuenta>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AltaCuenta</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="/Home/AltaCuenta">            
+            Nombre:
+            <input type="text" name="name" />
+            <br />
+            Contraseña:
+            <input type="password" name="pass" />
+            <br />            
+            <input type="submit" name="confirmar" />
+        </form>
+    </div>
+    <a href="/Home/Index/">Volver</a>
+</body>
+</html>

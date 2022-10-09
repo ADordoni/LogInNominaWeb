@@ -1,0 +1,22 @@
+﻿@model LogInNominaWeb.Models.Empleado
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Modificacion</title>
+</head>
+<body>
+    <p>El registro se eliminó exitosamente</p>
+    <br />
+    <a href="/Home/Leer?usuario=@Model.usuario">Leer registros almacenados</a>
+    <br />
+    <a href="/Home/AltaRegistro?usuario=@Model.usuario">Ingresar nuevo registro</a>
+    <br />
+    <a href="Home/Index">Cerrar sesión</a>
+</body>
+</html>
