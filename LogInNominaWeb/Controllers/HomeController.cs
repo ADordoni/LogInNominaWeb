@@ -29,7 +29,17 @@ namespace LogInNominaWeb.Controllers
             };
             CuentaABM mant = new CuentaABM();
             mant.Alta(cuenta);
-            return RedirectToAction("Index");
+            Cuenta cuenta1 = new Cuenta();
+            cuenta1 = mant.Leer(cuenta.nombre);
+            if (cuenta1 == null)
+            {
+                mant.Alta(cuenta);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("Error3");
+            }            
         }        
         public ActionResult Inicio(IFormCollection login)
         {
