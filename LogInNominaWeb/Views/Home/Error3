@@ -1,0 +1,19 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Error1</title>
+    </head>
+    
+    <body>
+        <p>Ese usuario ya existe. Ingrese otro nombre de usuario.</p>
+        <br />
+        <a href="/Home/AltaCuenta">Crear cuenta</a>
+        <br />
+        <a href="/Home/Index">Página principal</a>
+    </body>
+</html>
