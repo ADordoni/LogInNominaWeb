@@ -1,0 +1,22 @@
+create table cuenta (
+nombre varchar (30) not null primary key,
+clave varchar (20) not null);
+
+create table perfil(
+nickname varchar(30) not null primary key,
+nombre varchar(30),
+ciudad varchar(50),
+pais varchar(50),
+pronombre varchar(25),
+orientacion varchar(20),
+correo varchar(30) not null,
+genero varchar(20),
+fechnac date,
+foto varchar(100),
+foreign key (correo) references cuenta(nombre));
+
+create table libro (
+titulo varchar(50) not null primary key,
+texto varchar(1000),
+autor varchar(30) not null,
+foreign key (autor) references perfil(nickname))
